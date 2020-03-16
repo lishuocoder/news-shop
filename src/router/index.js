@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 //导入对应的路由组件
 import HomeContainer from '@/components/tabbar/HomeContainer'
-import MemberContainer from '@/components/tabbar/MemberContainer'
 import ShopContainer from '@/components/tabbar/ShopContainer'
 import SearchContainer from '@/components/tabbar/SearchContainer'
 
@@ -18,11 +17,6 @@ export default new Router({
       path: '/home',
       name: 'HomeContainer', 
       component: HomeContainer
-    },
-    {
-      path: '/member',
-      name: 'MemberContainer',
-      component: MemberContainer
     },
     {
       path: '/shopcar',

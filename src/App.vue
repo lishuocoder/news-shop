@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- 顶部 header 区域 -->
-    <mt-header fixed title="新闻项目"></mt-header>
+    <mt-header fixed title="手机点餐"></mt-header>
     <!-- 中间的 路由 router-view 区域 -->
     <transition>
       <router-view></router-view>
@@ -12,10 +12,6 @@
         <span class="mui-icon mui-icon-home"></span>
         <span class="mui-tab-label">首页</span>
       </router-link>
-      <router-link class="mui-tab-item" to="/member">
-        <span class="mui-icon mui-icon-contact"></span>
-        <span class="mui-tab-label">会员</span>
-      </router-link>
       <router-link class="mui-tab-item" to="/shopcar">
         <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
           <span class="mui-badge">0</span>
@@ -23,8 +19,8 @@
         <span class="mui-tab-label">购物车</span>
       </router-link>
       <router-link class="mui-tab-item" to="/search">
-        <span class="mui-icon mui-icon-search"></span>
-        <span class="mui-tab-label">搜素</span>
+        <span class="mui-icon mui-icon-extra-order mui-icon-extra"></span>
+        <span class="mui-tab-label">订单</span>
       </router-link>
     </nav>
   </div>

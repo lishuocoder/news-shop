@@ -11,7 +11,7 @@ import './lib/mui/css/icons-extra.css'
 import VueResource from 'vue-resource'
 
 //安装 vue-resource
-Vue.use(VueResource)
+Vue.use(VueResource) 
 
 Vue.config.productionTip = false
 Vue.use(MintUI)
