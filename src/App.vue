@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 #app {
   padding-top: 40px;
   overflow-x: hidden;

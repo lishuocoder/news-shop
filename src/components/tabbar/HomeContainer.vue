@@ -11,45 +11,35 @@
       </mt-swipe>
     </div>
     <!-- 推荐位组件 -->
-    <div class="fixed-list ">
-      <div class="fixed-scroll">
-        <div
-          v-for="(item,index) in itemcontainer"
-          :key="index"
-          class="fixed-product2"
-          @click="detail()"
-        >
-          <img class="fixed-image" :src="item.uri" />
-          <div class="fixed-title">{{item.title}}</div>
-          <div class="fixed-subtitle">{{item.subtitle}}</div>
-        </div>
-      </div>
-    </div>
+   <bannerContainer :list='itemList'></bannerContainer>
+
+    <!--  -->
+   
   </div>
 </template>
 
 <script>
 import homeList from "../../../data/home.js";
-import itemContainer from "./SearchContainer";
+import bannerContainer from"../common/banner";//推荐位组件
+import typeContainer from"../common/type";//菜品分类组件
 
 export default {
   components: {
-    itemContainer
+    bannerContainer,
+    typeContainer
   },
   data() {
-    return {};
-    bannerList: [];
-    itemcontainer: {
-    }
+    return {
+    bannerList: [],  
+    itemList:[],
+    };
   },
   created() {
     this.bannerList = homeList.bannerList.data;
-    this.itemcontainer = homeList.bannerList.data1;
+    this.itemList = homeList.bannerList.data1;
   },
   methods: {
-    detail() {
-      console.log("点了");
-    }
+   
   }
 };
 </script>
@@ -69,7 +59,9 @@ export default {
 .fixed-list {
   margin: 5px 8px;
   // overflow: hidden;
-  overflow-y:auto;
+  display: flex;
+  overflow-y:hidden;
+  overflow-x: scroll;
 }
 .fixed-scroll {
   white-space: nowrap;/*文本会在在同一行上继续 */
